@@ -26,4 +26,7 @@ btn2.place(x=320, y=200)
 btn3 = Button(window, text="Worker", font="times 15 bold")
 btn3.place(x=445, y=200)
 
+btn4 = Button(window, text="Create account", font="times 12 bold")
+btn4.place(x=300, y=280)
+
 window.mainloop()
