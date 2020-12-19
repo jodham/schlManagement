@@ -4,12 +4,26 @@ window = Tk()
 
 window.geometry("700x500")
 window.title("welcome screen")
+#register user account------------------------start
+def signup_user():
+    firstName_info = firstName.get()
+    secondName_info = secondName.get()
+    username_info = username.get()
+    password_info = password.get()
+    subject_info = subject.get()
 
+#register user account-------------------------end
 #create account form___________________________start
 def create_account():
     root = Toplevel(window)
     root.title("create account")
     root.geometry("300x400")
+
+    global firstName
+    global secondName
+    global username
+    global password
+    global subject
 
     label = Label(root, text="Create Account", font="times 12 bold")
     label.place(x=70, y=15)
@@ -17,7 +31,7 @@ def create_account():
     label1 = Label(root, text="First Name", font="times 12 bold")
     label1.place(x=50, y=50)
 
-    e1 = Entry(root)
+    e1 = Entry(root, textvariable = firstName)
     e1.place(x=50, y=70)
 
     label2 = Label(root, text="second Name", font="times 12 bold")
@@ -50,7 +64,7 @@ def create_account():
     e4 = Entry(root)
     e4.place(x=50, y=350)
 
-    btn = Button(root, text="Sign In", font="times 15 bold")
+    btn = Button(root, text="Sign Up",command = signup_user, font="times 15 bold")
     btn.place(x=200, y=355)
 #create account form--------------------------------end
 
@@ -62,8 +76,10 @@ def student_login():
     stud_login = Toplevel(window)
     stud_login.geometry("500x500")
     stud_login.title("login screen")
-    lb1 = Label(stud_login, text="Enter Login Details", font="times 15 bold")
-    lb1.place(x=160, y=10)
+    lb1 = Label(stud_login, text="Student Account", font="times 15 bold",fg="orange")
+    lb1.place(x=160, y=5)
+    lb1 = Label(stud_login, text="Enter Login Details", font="times 13 bold")
+    lb1.place(x=160, y=40)
 
     lb2 = Label(stud_login, text="Username", font=" times 15 bold")
     lb2.place(x=160, y=80)
@@ -90,8 +106,10 @@ def teach_login():
     teacher_login = Toplevel()
     teacher_login.geometry("500x500")
     teacher_login.title("login screen")
-    lb1 = Label(teacher_login, text="Enter Login Details", font="times 15 bold")
-    lb1.place(x=160, y=10)
+    lb1 = Label(teacher_login, text="Teacher Account", font="times 15 bold",fg="orange")
+    lb1.place(x=160, y=5)
+    lb1 = Label(teacher_login, text="Enter Login Details", font="times 13 bold")
+    lb1.place(x=160, y=40)
 
     lb2 = Label(teacher_login, text="Username", font=" times 15 bold")
     lb2.place(x=160, y=80)
@@ -119,8 +137,10 @@ def worker_account():
     worker_login = Toplevel()
     worker_login.geometry("500x500")
     worker_login.title("login screen")
-    lb1 = Label(worker_login, text="Enter Login Details", font="times 15 bold")
-    lb1.place(x=160, y=10)
+    lb1 = Label(worker_login, text="Worker Account", font="times 15 bold",fg="orange")
+    lb1.place(x=160, y=5)
+    lb1 = Label(worker_login, text="Enter Login Details", font="times 13 bold")
+    lb1.place(x=160, y=40)
 
     lb2 = Label(worker_login, text="Username", font=" times 15 bold")
     lb2.place(x=160, y=80)
