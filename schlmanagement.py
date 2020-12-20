@@ -1,13 +1,14 @@
 from tkinter import *
-import os
 
-window = Tk()
+class gui:
+ def __init__(self):
+    window = Tk()
 
-window.geometry("700x500")
-window.title("welcome screen")
-def __init__(self):
+    window.geometry("700x500")
+    window.title("welcome screen")
 
-    #register user account------------------------start
+
+        #register user account------------------------start
 
     def signup_user(self):
             firstname_info = firstname.get(self)
@@ -211,4 +212,6 @@ def __init__(self):
     btn4.place(x=300, y=280)
 
 
-window.mainloop()
+#window.mainloop()
+if __name__ == "__window__":
+    g = gui()
